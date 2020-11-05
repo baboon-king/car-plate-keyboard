@@ -1,0 +1,74 @@
+{
+  "name": "car-plate-keyboard",
+  "version": "1.0.0",
+  "private": false,
+  "description": "car-plate-keyboard",
+  "main": "lib/carPlateKeyboard.umd.min.js",
+  "license": "MIT",
+  "keywords": [
+    "car",
+    "plate",
+    "input",
+    "selector",
+    "zh",
+    "车牌号",
+    "键盘"
+  ],
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baboon-king/car-plate-keyboard.git"
+  },
+  "author": "changfan.xu",
+  "bugs": {
+    "url": "https://github.com/baboon-king/car-plate-keyboard/issues"
+  },
+  "homepage": "https://github.com/baboon-king/car-plate-keyboard#readme",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name carPlateKeyboard --dest lib packages/index.js"
+  },
+  "dependencies": {
+    "core-js": "^3.3.2",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
