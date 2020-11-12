@@ -1,6 +1,6 @@
 {
   "name": "car-plate-keyboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "car-plate-keyboard",
   "main": "lib/carPlateKeyboard.umd.min.js",
