@@ -4,11 +4,6 @@
 
 - car-plate-keyboard 是基于 Vue 的一款虚拟键盘，用于车牌号输入。
 
-- 本项目基于此项目上 [input-number-plate](https://github.com/wokeT/input-number-plate) 进行二次修改
-
-- 在此感谢 [原作者](https://github.com/wokeTlink) 对开源做出的贡献
-- 如有任何不妥或者版权上的问题，请联系我，我会及时做出回应
-
 ## 如何使用
 
 - 安装
@@ -44,7 +39,7 @@ Vue.use(carPlateKeyboard)
 | overlay             | 是否使用遮罩                         | Boolean | true   |
 | previewOnKeyboard   | 是否在键盘上预览输入的值             | Boolean | true   |
 | checkInputBlocked   | 检查键盘是否挡住输入框               | Boolean | false  |
-| readonly            | 是否只读                             | Boolean | false  |
+| readonly (1.0.2)    | 是否只读                             | Boolean | false  |
 
 ### Events
 
@@ -59,3 +54,25 @@ Vue.use(carPlateKeyboard)
 | --------- | ------------------------ | ----------- |
 | default   | 自定义输入框             | value:Array |
 | backspace | 自定义退格(删除)按钮内容 | -           |
+
+### 声明
+
+- 本项目基于此项目上 [input-number-plate](https://github.com/wokeT/input-number-plate) 进行二次开发
+
+- 在此感谢 [原作者](https://github.com/wokeTlink) 对开源做出的贡献
+
+- 如有任何不妥或者版权上的问题，请联系我，我会及时做出回应
+
+### Change Log
+
+#### 1.0.2
+
+- 增加 只读 `readonly` api
+
+#### 1.0.1
+
+- none
+
+#### 1.0.0
+
+- 首个版本
