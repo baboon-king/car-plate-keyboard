@@ -27,6 +27,9 @@
 
       <h3>新能源多一位</h3>
       <car-plate-keyboard :value="defaultPlate2" @submit="submit"> </car-plate-keyboard>
+
+      <h3>只读</h3>
+      <car-plate-keyboard :value="defaultPlate3" readonly @submit="submit"> </car-plate-keyboard>
     </div>
   </div>
 </template>
@@ -38,7 +41,8 @@ export default {
   data() {
     return {
       defaultPlate: '沪A555',
-      defaultPlate2: '沪A88888'
+      defaultPlate2: '沪A88888',
+      defaultPlate3: '沪A45648'
     }
   },
   methods: {
