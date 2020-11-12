@@ -4,6 +4,11 @@
 
 - car-plate-keyboard 是基于 Vue 的一款虚拟键盘，用于车牌号输入。
 
+## 示例
+
+- [GitHub](https://baboon-king.github.io/car-plate-keyboard)
+- [GitEE](https://baboonking.gitee.io/car-plate-keyboard/)
+
 ## 如何使用
 
 - 安装
