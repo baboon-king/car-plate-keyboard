@@ -96,6 +96,10 @@ export default {
     checkInputBlocked: {
       type: Boolean,
       default: false
+    },
+    readonly: {
+      type: Boolean,
+      default: false
     }
   },
   data: function () {
@@ -201,6 +205,7 @@ export default {
     },
     // 打开键盘
     open() {
+      if (this.readonly) return
       this.visible = true
     },
     // 判断展示框是否被键盘挡住
