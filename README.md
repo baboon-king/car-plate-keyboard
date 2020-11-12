@@ -44,6 +44,7 @@ Vue.use(carPlateKeyboard)
 | overlay             | 是否使用遮罩                         | Boolean | true   |
 | previewOnKeyboard   | 是否在键盘上预览输入的值             | Boolean | true   |
 | checkInputBlocked   | 检查键盘是否挡住输入框               | Boolean | false  |
+| readonly            | 是否只读                             | Boolean | false  |
 
 ### Events
 
