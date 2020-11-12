@@ -60,7 +60,7 @@ Vue.use(carPlateKeyboard)
 | default   | 自定义输入框             | value:Array |
 | backspace | 自定义退格(删除)按钮内容 | -           |
 
-### 声明
+## 声明
 
 - 本项目基于此项目上 [input-number-plate](https://github.com/wokeT/input-number-plate) 进行二次开发
 
@@ -68,7 +68,7 @@ Vue.use(carPlateKeyboard)
 
 - 如有任何不妥或者版权上的问题，请联系我，我会及时做出回应
 
-### Change Log
+## Change Log
 
 #### 1.0.2
 
