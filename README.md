@@ -36,15 +36,15 @@ Vue.use(carPlateKeyboard)
 
 ### Props
 
-| 参数                | 说明                                 | 类型    | 默认值 |
-| ------------------- | ------------------------------------ | ------- | ------ |
-| value               | 默认值                               | String  | ""     |
-| openKeyboardOnInit  | 初始化时就弹出键盘（在弹窗中使用时） | Boolean | false  |
-| closeOnClickOverlay | 点击遮罩关闭键盘                     | Boolean | true   |
-| overlay             | 是否使用遮罩                         | Boolean | true   |
-| previewOnKeyboard   | 是否在键盘上预览输入的值             | Boolean | true   |
-| checkInputBlocked   | 检查键盘是否挡住输入框               | Boolean | false  |
-| readonly (1.0.2)    | 是否只读                             | Boolean | false  |
+| 参数                   | 说明                                 | 类型    | 默认值 |
+| ---------------------- | ------------------------------------ | ------- | ------ |
+| value                  | 默认值                               | String  | ""     |
+| open-keyboard-on-init  | 初始化时就弹出键盘（在弹窗中使用时） | Boolean | false  |
+| close-on-click-overlay | 点击遮罩关闭键盘                     | Boolean | true   |
+| overlay                | 是否使用遮罩                         | Boolean | true   |
+| preview-on-keyboard    | 是否在键盘上预览输入的值             | Boolean | true   |
+| check-input-blocked    | 检查键盘是否挡住输入框               | Boolean | false  |
+| readonly (1.0.2)       | 是否只读                             | Boolean | false  |
 
 ### Events
 
@@ -66,18 +66,20 @@ Vue.use(carPlateKeyboard)
 
 - 在此感谢 [原作者](https://github.com/wokeTlink) 对开源做出的贡献
 
-- 如有任何不妥或者版权上的问题，请联系我，我会及时做出回应
-
 ## Change Log
 
-#### 1.0.2
+### 1.0.3
+
+- 修复 ios 上打开键盘时，定位错误问题
+
+### 1.0.2
 
 - 增加 只读 `readonly` api
 
-#### 1.0.1
+### 1.0.1
 
 - none
 
-#### 1.0.0
+### 1.0.0
 
 - 首个版本
