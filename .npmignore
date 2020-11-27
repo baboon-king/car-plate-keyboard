@@ -9,4 +9,4 @@ dist
 vue.config.js
 babel.config.js
 *.map
-.eslintrc
+.eslintrc.js
