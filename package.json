@@ -34,12 +34,11 @@
     "lib": "vue-cli-service build --target lib --name carPlateKeyboard --dest lib packages/index.js",
     "deploy": "npm run build && gh-pages -d dist",
     "commit-lib": "npm run lib && git reset HEAD && git add lib/* && git commit -m \"commit lib files\"",
-    "patch": "npm run commit-lib && npm version patch && npm run publish",
-    "minor": "npm run commit-lib && npm version minor && npm run publish",
-    "major": "npm run commit-lib && npm version major && npm run publish",
     "prepublish": "npm config set registry http://registry.npmjs.org",
-    "publish": "npm publish",
-    "postpublish": "npm config set registry https://registry.npm.taobao.org"
+    "postpublish": "npm config set registry https://registry.npm.taobao.org",
+    "patch": "npm run commit-lib && npm version patch && npm run prepublish && npm publish && npm run postpublish",
+    "minor": "npm run commit-lib && npm version minor && npm run prepublish && npm publish && npm run postpublish",
+    "major": "npm run commit-lib && npm version major && npm run prepublish && npm publish && npm run postpublish"
   },
   "dependencies": {
     "core-js": "^3.3.2",
