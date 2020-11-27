@@ -68,6 +68,10 @@ Vue.use(carPlateKeyboard)
 
 ## Change Log
 
+### 1.0.4
+
+- 修复 遮罩覆盖键盘问题
+
 ### 1.0.3
 
 - 修复 ios 上打开键盘时，定位错误问题
