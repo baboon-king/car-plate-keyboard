@@ -2,8 +2,11 @@
 examples/
 packages/
 public/
+.vscode
+dist
 
 # 忽略指定文件
 vue.config.js
 babel.config.js
 *.map
+.eslintrc
