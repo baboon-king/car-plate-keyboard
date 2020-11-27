@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :style="{ zIndex: visible ? 999 : 'auto' }">
+  <div>
     <div @click="closeByClickOverlay()" v-if="_overlay" class="back-bord" />
     <div @click="open()" ref="inputBlock">
       <!--支持插槽-->
@@ -7,7 +7,7 @@
         <!--默认输入框-->
         <div class="data-show">
           <template v-for="n in 8">
-            <div :class="['data-show-block', { active: isActive(n) }]" :style="{ 'border-color': isLastBlock(n) ? '#07c160' : '' }" :key="n">
+            <div :class="['data-show-block', { active: isActive(n) }, { 'new-energy': isLastBlock(n) }]" :key="n">
               {{ inputValue[n - 1] }}
             </div>
           </template>
@@ -17,10 +17,10 @@
 
     <!--键盘-->
     <transition name="keybordSlide">
-      <div v-if="visible" class="keybord-wrap" :style="{ zIndex: visible ? 999 : 'auto' }">
+      <div v-if="visible" class="keybord-wrap">
         <header class="keybord-header">
           <span @click.stop="cancel()">取消</span>
-          <span class="preview" v-if="previewOnKeyboard">{{ inputValue.join('') }}</span>
+          <span v-if="previewOnKeyboard" :class="['preview', { 'new-energy': newEnergy }]">{{ inputValue.join('') }}</span>
           <span :class="[{ gray: inputValue.length < 7 }]" @click.stop="submit()">完成</span>
         </header>
 
@@ -102,7 +102,7 @@ export default {
       default: false
     }
   },
-  data: function () {
+  data: function() {
     return {
       placeholderDom: null,
       keybordType: '字',
@@ -160,6 +160,9 @@ export default {
       } else {
         return this.wordList.slice(30, 37)
       }
+    },
+    newEnergy() {
+      return this.inputValue.length === 8
     }
   },
   methods: {
@@ -259,18 +262,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-.keybordSlide-enter-active,
-.keybordSlide-leave-active {
-  transition: all 0.2s linear;
-  transform: translateY(0px);
-}
-.keybordSlide-enter, .keybordSlide-leave-to /* .keybordSlide-leave-active below version 2.1.8 */ {
-  transform: translateY(250px);
-}
-
-.wrapper {
-  z-index: auto;
-}
+@backBordZIndex: 980511;
 
 .back-bord {
   width: 100vw;
@@ -279,7 +271,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 980511;
+  z-index: @backBordZIndex;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -309,11 +301,14 @@ export default {
     outline: none;
     border: 1px solid #409eff;
   }
+  .new-energy {
+    border-color: #67c23a;
+  }
 }
 
 .keybord-wrap {
   position: fixed;
-  z-index: 980605;
+  z-index: @backBordZIndex + 1;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -328,6 +323,9 @@ export default {
     background: #f0f0f0;
     .preview {
       color: #409eff;
+    }
+    .new-energy {
+      color: #67c23a;
     }
   }
 
@@ -399,5 +397,14 @@ export default {
   .icon-delete {
     font-size: 20px;
   }
+}
+
+.keybordSlide-enter-active,
+.keybordSlide-leave-active {
+  transition: all 0.2s linear;
+  transform: translateY(0px);
+}
+.keybordSlide-enter, .keybordSlide-leave-to /* .keybordSlide-leave-active below version 2.1.8 */ {
+  transform: translateY(250px);
 }
 </style>
