@@ -62,9 +62,9 @@ Vue.use(carPlateKeyboard)
 
 ## 声明
 
-- 本项目基于此项目上 [input-number-plate](https://github.com/wokeT/input-number-plate) 进行二次开发
+- 本项目基于此项目上 [input-number-plate](https://github.com/woke-T/input-number-plate) 进行二次开发
 
-- 在此感谢 [原作者](https://github.com/wokeTlink) 对开源做出的贡献
+- 在此感谢 [原作者](https://github.com/woke-T) 对开源做出的贡献
 
 ## Change Log
 
