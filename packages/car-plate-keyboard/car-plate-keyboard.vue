@@ -283,9 +283,9 @@ export default {
   position: relative;
   width: 100%;
   column-count: 8;
-  column-gap: 5px;
-  min-width: 250px;
-  max-width: 350px;
+  column-gap: 2px;
+  min-width: 190px;
+  max-width: 450px;
   .data-show-block {
     display: flex;
     height: 0;
