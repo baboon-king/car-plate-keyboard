@@ -68,6 +68,10 @@ Vue.use(carPlateKeyboard)
 
 ## Change Log
 
+### 1.0.5
+
+- 修复 小屏设备 (iPhone 5) 超出问题
+
 ### 1.0.4
 
 - 修复 遮罩覆盖键盘问题
